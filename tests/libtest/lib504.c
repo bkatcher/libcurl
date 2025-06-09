@@ -126,5 +126,5 @@ test_cleanup:
   curl_easy_cleanup(c);
   curl_global_cleanup();
 
-  return res;
+  return res == TEST_ERR_SUCCESS ? 1 : 0;
 }

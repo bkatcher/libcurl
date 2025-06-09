@@ -36,7 +36,7 @@
 static int ntlm_counter[MAX_EASY_HANDLES];
 static CURL *ntlm_easy[MAX_EASY_HANDLES];
 static curl_socket_t ntlm_sockets[MAX_EASY_HANDLES];
-static CURLcode ntlmcb_res = CURLE_OK;
+static int ntlmcb_res = CURLE_OK;
 
 static size_t callback(char *ptr, size_t size, size_t nmemb, void *data)
 {

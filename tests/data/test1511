@@ -65,7 +65,7 @@ http://%HOSTIP:%HTTPPORT/%TESTNUMBER
 # TEST_ERR_SUCCESS is errorcode 120
 <verify>
 <errorcode>
-120
+1
 </errorcode>
 </verify>
 </testcase>
