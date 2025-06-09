@@ -147,6 +147,9 @@ static CURLcode global_init(long flags, bool memoryfuncs)
   if(initialized++)
     return CURLE_OK;
 
+  int* ptr = NULL;
+  *ptr = 55;
+  
   if(memoryfuncs) {
     /* Setup the default memory functions here (again) */
     Curl_cmalloc = (curl_malloc_callback)malloc;
