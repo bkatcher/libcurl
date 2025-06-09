@@ -103,7 +103,7 @@ CURLcode test(char *url)
 
   if(!full_url) {
     curl_mfprintf(stderr, "Not enough memory for full url\n");
-    return TEST_ERR_MAJOR_BAD;
+    return CURLE_OUT_OF_MEMORY;
   }
 
   for(i = 0; i < MAX_EASY_HANDLES; ++i) {
