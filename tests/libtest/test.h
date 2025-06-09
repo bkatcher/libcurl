@@ -97,18 +97,20 @@ extern int unitfail;
 ** For portability reasons TEST_ERR_* values should be less than 127.
 */
 
-#define TEST_ERR_MAJOR_BAD     CURLE_RESERVED126
-#define TEST_ERR_RUNS_FOREVER  CURLE_RESERVED125
-#define TEST_ERR_EASY_INIT     CURLE_RESERVED124
-#define TEST_ERR_MULTI         CURLE_RESERVED123
-#define TEST_ERR_NUM_HANDLES   CURLE_RESERVED122
-#define TEST_ERR_SELECT        CURLE_RESERVED121
-#define TEST_ERR_SUCCESS       CURLE_RESERVED120
-#define TEST_ERR_FAILURE       CURLE_RESERVED119
-#define TEST_ERR_USAGE         CURLE_RESERVED118
-#define TEST_ERR_FOPEN         CURLE_RESERVED117
-#define TEST_ERR_FSTAT         CURLE_RESERVED116
-#define TEST_ERR_BAD_TIMEOUT   CURLE_RESERVED115
+#define TEST_ERR_BASE CURL_LAST
+
+#define TEST_ERR_MAJOR_BAD     (TEST_ERR_BASE + 1)
+#define TEST_ERR_RUNS_FOREVER  (TEST_ERR_BASE + 2)
+#define TEST_ERR_EASY_INIT     (TEST_ERR_BASE + 3)
+#define TEST_ERR_MULTI         (TEST_ERR_BASE + 4)
+#define TEST_ERR_NUM_HANDLES   (TEST_ERR_BASE + 5)
+#define TEST_ERR_SELECT        (TEST_ERR_BASE + 6)
+#define TEST_ERR_SUCCESS       (TEST_ERR_BASE + 7)
+#define TEST_ERR_FAILURE       (TEST_ERR_BASE + 8)
+#define TEST_ERR_USAGE         (TEST_ERR_BASE + 9)
+#define TEST_ERR_FOPEN         (TEST_ERR_BASE + 10)
+#define TEST_ERR_FSTAT         (TEST_ERR_BASE + 11)
+#define TEST_ERR_BAD_TIMEOUT   (TEST_ERR_BASE + 12)
 
 /*
 ** Macros for test source code readability/maintainability.
